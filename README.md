@@ -46,3 +46,6 @@ Temos uma sugestão de design no Figma. Entretanto, fique à vontade para montar
 - Eventos em JavaScript.
 
 #### HTML e CSS
+
+- Manipulação de elementos HTML
+- Layout e design básicos em CSS
