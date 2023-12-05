@@ -23,7 +23,7 @@ O projeto já possui uma estrutura inicial pronta para você na branch principal
 
 ## 🔨 Desafio extra para quem quer ir além
 
-- Crie um CheckBox com o texto **Mostrar eventos** que seja capaz de exibir ou ocultar o registro de ações do usuário na partida.
+- Crie um `checkbox` com o texto **Mostrar eventos** que seja capaz de exibir ou ocultar o registro de ações do usuário na partida.
 - Exiba um alerta com o resultado da partida ao final de cada jogo.
 
 ## 🎨 Design Sugerido
