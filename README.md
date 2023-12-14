@@ -1,4 +1,4 @@
-# Jogo da Velha
+# [📝 Jogo da Velha](https://codante.io/mini-projetos/jogo-da-velha)
 
 Este Mini Projeto é um excelente desafio prático para fortalecer nossas habilidades em HTML, CSS e JavaScript na construção de um jogo da velha.
 
