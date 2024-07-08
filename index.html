@@ -9,18 +9,63 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap"
-  rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap"
+    rel="stylesheet"
   >
   <link type="text/css" rel="stylesheet" href="./css/global.css">
+  <link type="text/css" rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
   <main class="container-main">
-    <!-- ESTRUTURE O SEU HTML AQUI -->
+    <section class="game-section">
+      <div class="game-board">
+          <div id="cell-a1" class="game-cell"></div>
+          <div class="separator border-top"></div>
+          <div id="cell-a2" class="game-cell"></div>
+          <div class="separator border-top"></div>
+          <div id="cell-a3" class="game-cell"></div>
+          <div class="separator border-left"></div>
+          <div class="separator"></div>
+          <div class="separator"></div>
+          <div class="separator"></div>
+          <div class="separator border-right"></div>
+          <div id="cell-b1" class="game-cell"></div>
+          <div class="separator"></div>
+          <div id="cell-b2" class="game-cell"></div>
+          <div class="separator"></div>
+          <div id="cell-b3" class="game-cell"></div>
+          <div class="separator border-left"></div>
+          <div class="separator"></div>
+          <div class="separator"></div>
+          <div class="separator"></div>
+          <div class="separator border-right"></div>
+          <div id="cell-c1" class="game-cell"></div>
+          <div class="separator border-bottom"></div>
+          <div id="cell-c2" class="game-cell"></div>
+          <div class="separator border-bottom"></div>
+          <div id="cell-c3" class="game-cell"></div>
+      </div>
+      <div class="button-container">
+          <input type="checkbox" name="toggle-events" id="toggle-events" class="checkbox-events">
+          <label for="toggle-events" class="label-events">Mostrar eventos</label>
+        <!-- <button id="btn-restart" class="btn-restart">Reiniciar</button> -->
+      </div>
+    </section>
+    <section class="game-log">
+      <div class="log-entry">0 na posição A2</div>
+      <div class="log-entry">0 na posição A2</div>
+      <div class="log-entry">0 na posição A2</div>
+      <div class="log-entry">0 na posição A2</div>
+      <div class="log-entry">0 na posição A2</div>
+      <div class="log-entry">0 na posição A2</div>
+      <div class="log-entry">0 na posição A2</div>
+      <div class="log-entry">0 na posição A2</div>
+      <div class="log-entry">0 na posição A2</div>
+      <div class="log-result">Empate!</div>
+    </section>
   </main>
   <div class="overlay"></div>
-
   <script type="module" src="./scripts/main.js"></script>
 </body>
 
