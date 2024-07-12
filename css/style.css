@@ -2,15 +2,16 @@
     margin: 25px;
     width: 100%;
     height: 100%;
-    max-width: 680px;
-    max-height: 680px;
-    min-width: 290px;
-    min-height: 290px;
+    max-width: 650px;
+    max-height: 650px;
+    min-width: 400px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
+    aspect-ratio: 1/1;
 }
 
 .game-board {
@@ -21,14 +22,15 @@
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 8px 1fr 8px 1fr ;
-    grid-template-rows: 1fr 8px 1fr 8px 1fr ;
+    grid-template-rows: 1fr 8px 1fr 8px 1fr  ;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.1);
+    
 }
 
 .game-cell {
     width: 100%;
     height: 100%;
     background: transparent;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,13 +40,15 @@
 .game-cell img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: none; /* Esconda a imagem inicialmente */
+    max-width: 150px;
 }
-
-.active {
+.game-cell:hover {
     background: #FFFFFF;
 }
+.disabled {
+    pointer-events: none;
+}
+
 
 .separator{
     background-color: #9B9B9B;
@@ -66,6 +70,7 @@
     border-bottom-left-radius: 4px;
 }
 
+
 .button-container{
     display: flex;
     justify-content: center;
@@ -80,6 +85,7 @@
     border: solid 4px #707070;
     border-radius: 4px;
     position: relative;
+    cursor: pointer;
 
 }
 
@@ -100,18 +106,20 @@
     font-size: 24px;
     line-height: 29px;
     color: #707070;
+    cursor: pointer;
 }
 
-.game-log{
+.game-events{
     height: 100%;
-    display: flex;
+    min-width: 210px;
+    display: none;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     gap: 12px;
 }
 
-.log-entry{
+.event{
     width: 210px;
     height: 46px;
     border-radius: 15px;
@@ -124,22 +132,93 @@
     font-size: 20px;
     line-height: 24px;
     color: #1E1E1E;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.1);
 }
 
-
-.log-result{
-    width: 150px;
-    height: 46px;
-    border-radius: 15px;
+.show-events{
     display: flex;
+}
+
+.modal{
+    display: none;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content{
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 300px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.start-game, .end-game, .draw-game{
+    width: 100%;
+    height: 46px;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.start-game >div{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.start-game > div > button{
+    width: 80px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     color: #3A4042;
     background: #EFF25A ;
     text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.1);
+}
+
+.end-game span{
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.end-game > button, .draw-game > button {
+    width: 160px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3A4042;
+    background: #EFF25A ;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.1);
 }
 
 
