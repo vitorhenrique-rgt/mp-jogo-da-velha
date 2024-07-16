@@ -44,9 +44,13 @@ function startGame() {
     symbol.addEventListener('click', symbolSelected);
   }
   for (let cell of gameCells) {
+    cell.addEventListener('mouseenter', addPlay)
+    cell.addEventListener('mouseleave', removePlay)
     cell.addEventListener('click', handleClick);
   }
 }
+
+
 
 function restartGame() {
   for (let cell of gameCells) {
@@ -117,14 +121,20 @@ function addImage(player) {
 }
 
 function addPlay(clickedElement) {
-  clickedElement.appendChild(addImage(currentPlayer));
-  clickedElement.dataset.value = currentPlayer;
-  clickedElement.classList.add('disabled');
+  clickedElement.target.appendChild(addImage(currentPlayer));
+}
+
+function removePlay(element){
+  if (element.target.dataset.value=='') {
+    element.target.innerHTML= ''
+  }
 }
 
 function handleClick(event) {
-  addPlay(event.target);
-  createEvent(event.target.id);
+  const cell = event.currentTarget;
+  cell.classList.add('disabled')
+  cell.dataset.value = currentPlayer;
+  createEvent(cell.id);
   const win = checkWinner();
   if (win) {
     showModal(currentPlayer);

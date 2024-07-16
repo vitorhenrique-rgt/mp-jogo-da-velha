@@ -19,7 +19,8 @@
 <body>
   <main class="container-main">
     <section class="game-section">
-      <div class="game-board">
+      <div>
+        <div class="game-board">
           <div id="cell-a1" class="game-cell" data-value=""></div>
           <div class="separator border-top"></div>
           <div id="cell-a2" class="game-cell" data-value=""></div>
@@ -45,13 +46,14 @@
           <div id="cell-c2" class="game-cell" data-value=""></div>
           <div class="separator border-bottom"></div>
           <div id="cell-c3" class="game-cell" data-value=""></div>
-      </div>
-      <div class="button-container">
+        </div>
+        <div class="button-container">
           <input type="checkbox" name="toggle-events" id="toggle-events" class="checkbox-events">
           <label for="toggle-events" class="label-events">Mostrar eventos</label>
+        </div>
       </div>
-    </section>
-    <section id="game-events" class="game-events">
+      <section id="game-events" class="game-events">
+      </section>
     </section>
 
     <div id="modal" class="modal">
